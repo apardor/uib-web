@@ -1,0 +1,31 @@
+:root{
+  --main-bg-color: #4DE1F9;
+  --secondary-bg-color: #021859;
+}
+
+
+section{
+  width: 80%;
+  margin: auto;
+  padding: 2% 2%;
+}
+
+
+.first{
+  background-color: var(--main-bg-color);
+}
+
+.second{
+  background-color: var(--secondary-bg-color);
+  color: #FFF;
+}
+
+.third{
+  background-color: var(--main-bg-color);
+}
+
+
+.fourth{
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+}
