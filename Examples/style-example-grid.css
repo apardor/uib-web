@@ -1,0 +1,168 @@
+body{
+  width: 100%;
+  margin:auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template: 90px repeat(4, 1fr)  90px / repeat(4, 1fr);
+  grid-template-areas: "header  header header header"
+                        "content content content sidebar"
+                        "content content content sidebar"
+                        "content content content sidebar"
+                        "content content content sidebar"
+                        "footer footer footer footer";
+}
+
+
+nav {
+  grid-area: header;
+  background-color: #220B5E;
+  width: 100%;
+}
+
+
+nav ul{
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: .5em;
+  margin: 0;
+}
+
+
+nav ul li{
+  padding: 1em 2em;
+}
+
+
+nav ul li a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+li.logo{
+  margin-right: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 3em;
+}
+
+
+section#gallery {
+  grid-area: content;
+  text-align: center;
+}
+
+#flex-gallery{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.box{
+width: 200px;
+height: 300px;
+margin: .1em;
+font-size: 2em;
+color: #FFF;
+}
+
+
+
+.box1{
+  background-color: #977EF2;
+}
+
+.box2{
+  background-color: #2955D9;
+}
+
+
+.box3{
+  background-color: #0597F2;
+}
+
+.box4{
+ background-color: #F25C05;
+}
+
+
+.box5{
+  background-color: #F24C3D;
+}
+
+.box6{
+  background-color: #977EF2;
+}
+
+.box7{
+  background-color: #2955D9;
+}
+
+.box8{
+  background-color: #0597F2;
+}
+
+
+
+aside {
+  grid-area: sidebar;
+  background-color: #D8D8D8;
+  margin: 0 2em 0 0;
+  padding: 2em;
+}
+
+
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  background-color: #000;
+}
+
+footer ul{
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding: .5em;
+  margin: 0;
+}
+
+footer ul li{
+  padding: 1em 2em;
+}
+
+footer ul li a{
+  color: #FFF;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+body{
+    grid-template: 4fr / 1fr;
+    grid-template-areas: "header "
+                          "content"
+                          "sidebar"
+                          "footer";
+      }
+
+      nav ul, footer ul{
+        flex-flow: column wrap;
+        align-items: center;
+      }
+
+
+      aside {
+        margin: 0 2em 0 2em;
+      }
+
+
+
+}
